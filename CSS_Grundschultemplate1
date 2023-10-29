@@ -431,7 +431,11 @@
 .DS-post-it-header span {
   margin-left: 2px; /* Hier kannst du den Abstand anpassen */
 }
- 
+
+
+.wort > .silbe:nth-child(even) {color:red;}
+
+
  .Lesetext_red {
         color: #ca354f;
         font-size: 22px; 
