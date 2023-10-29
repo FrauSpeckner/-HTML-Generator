@@ -427,14 +427,12 @@ function generatePostIt(font, emoji, content) {
     `;
 }
 
-function generateLesetext(font, content) 
-  {
-  content = "<div style='font-family: "+font+";'><span class='wort'><span = 'silbe'>"+
-  content.replace(/\ /g,"</span></span> <span class='wort'><span cass='silbe'>").replace(/-/g,"</span><span class='silbe'>")+
-  "</span></div>"
-  return content
-  }
-
+function generateLesetext(font, content) {
+    content = "<div class='Lesetext' style='font-family: " + font + ";'><span class='wort'><span class='silbe'>" +
+        content.replace(/\ /g, "</span></span> <span class='wort'><span class='silbe'>").replace(/-/g, "</span><span class='silbe'>") +
+        "</span></div>";
+    return content;
+}
 
 
 
