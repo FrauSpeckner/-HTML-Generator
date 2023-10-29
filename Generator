@@ -427,6 +427,420 @@ function generatePostIt(font, emoji, content) {
     `;
 }
 
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Stil für den Generator */
+
+@font-face {
+    font-family: 'GrundschulschriftDS';
+    src: url('//2ttf.com/webfont/Atj1My9YsiY/webfont.ttf') format('truetype');
+}
+        body {
+            font-family: Arial, sans-serif;
+            text-align: left;
+        }
+
+        
+
+        #generator-container {
+            width: 80%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        #generator-form {
+            background-color: #F4F2EE;
+            padding: 20px;
+            border-radius: 10px;
+border: solid #B5A8A8; 
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+
+        }
+
+        select, textarea, input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #B5A8A8;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: #C4C6B0;
+            color: black;
+font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid black;
+            background-color: white;
+            color: #000;
+            border-radius: 5px;
+            width: 100%;
+            white-space: pre-line; /* Behält Zeilenumbrüche im Text bei */
+        }
+
+        #copy-button {
+            background-color: #C4C6B0;
+            color: black;
+font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+   
+    <div id="generator-container">
+        <form id="generator-form">
+            <label for="element">Auswahl des Elements:</label>
+            <select id="element" name="element">
+                <option value="main-heading">Hauptüberschrift</option>
+                <option value="sub-heading">Teilüberschrift</option>
+                <option value="button">Button mit Link</option>
+                <option value="text-box">Textbox</option>
+                <option value="Zitatbox">Zitatbox</option>
+                <option value="speech-bubble-emoji-links">Sprechblase nach links</option>
+                <option value="speech-bubble-emoji-rechts">Sprechblase nach rechts</option>
+                <option value="Tipp-Box">Tipp-Box</option>
+                <option value="Drivelink">Link zum Drive</option>
+                <option value="Officelink">Link zu Office</option>
+                <option value="Messengerlink">Link zum Messenger</option>
+                <option value="post-it">Post It</option>
+                <option value="Lesetext">Lesetext</option>
+
+            </select>
+
+            <label for="font">Schriftart:</label>
+            <select id="font" name="font">
+             <option value="Atkinson Hyperlegible">Atkinson Hyperlegible</option>
+            <option value="Lexend">Lexend</option>
+            <option value="Arial, sans-serif">Arial</option>
+            <option value="Times New Roman, Times, serif">Times New Roman</option>
+            <option value="Courier New, Courier, mono">Courier New</option>
+            <option value="Georgia, Times New Roman, Times, serif">Georgia</option>
+            <option value="Verdana, Geneva, sans-serif">Verdana</option>
+            <option value="Trebuchet MS, Helvetica, sans-serif">Trebuchet MS</option>
+            <option value="amaranth">Amaranth</option>
+            <option value="bienchen_a, bienchen_b">Schulausgangsschrift</option>
+            <option value="SchulbuchBayern">Schulbuch Bayern</option>
+            <option value="VA2">Ausgangsschrift liniert</option>
+            <option value="VAu30k">Ausgangsschrift</option>
+            <option value="OpenDyslexic">OpenDyslexic</option>
+<option value="GrundschulschriftDS">GrundschulschriftDS</option>
+                <!-- Weitere Schriftarten hier einfügen -->
+
+            </select>
+
+            <label for="content">Inhalt:</label>
+            <textarea id="content" name="content" rows="4"></textarea>
+
+            <label for="link">(Nur für Button, Drive und Messenger) Link:</label>
+            <input type="text" id="link" name="link">
+
+            <label for="emoji">Emoji:</label>
+            <select id="emoji" name="emoji">
+                <option value="😊">😊</option>
+                <option value="❤️">❤️</option>
+       <option value="📝">📝</option>
+<option value="🎃">🎃</option>
+<option value="👻">👻</option>
+<option value="🦇">🦇</option>
+<option value="🕷️">🕷️</option>
+<option value="🧟‍♂️">🧟‍♂️</option>
+<option value="🍬">🍬</option>
+<option value="🧛‍♀️">🧛‍♀️</option>
+<option value="🕸️">🕸️</option>
+<option value="🦠">🦠</option>
+<option value="🕯️">🕯️</option>
+
+  <option value="👍">👍</option>
+  <option value="🌟">🌟</option>
+  <option value="💡">💡</option>
+  <option value="📝">📝</option>
+  <option value="🔗">🔗</option>
+  <option value="📎">📎</option>
+  <option value="📬">📬</option>
+  <option value="📂">📂</option>
+  <option value="📕">📕</option>
+  <option value="🎉">🎉</option>
+  <option value="🎈">🎈</option>
+  <option value="🍕">🍕</option>
+  <option value="🌈">🌈</option>
+  <option value="🎁">🎁</option>
+  <option value="🚀">🚀</option>
+  <option value="⚡">⚡</option>
+  <option value="🍦">🍦</option>
+  <option value="🌺">🌺</option>
+  <option value="👩‍💻">👩‍💻</option>
+  <option value="👨‍💻">👨‍💻</option>
+  <option value="👩‍🎓">👩‍🎓</option>
+  <option value="👨‍🎓">👨‍🎓</option>
+  <option value="👩‍🚀">👩‍🚀</option>
+  <option value="👨‍🚀">👨‍🚀</option>
+  <option value="🧍">🧍</option>
+  <option value="🧍‍♀️">🧍‍♀️</option>
+  <option value="🧍‍♂️">🧍‍♂️</option>
+  <option value="👩">👩</option>
+  <option value="👨">👨</option>
+  <option value="🎒">🎒</option>
+  <option value="🏫">🏫</option>
+  <option value="📖">📖</option>
+  <option value="💻">💻</option>
+    <option value="👟">👟</option>
+  <option value="👞">👞</option>
+  <option value="📚">📚</option>
+  <option value="🎓">🎓</option>
+                <!-- Weitere Emojis hier einfügen -->
+            </select>
+
+            <button type="button" id="generate-button">HTML generieren</button>
+        </form>
+
+        <div id="output">
+            <!-- Hier wird der generierte HTML-Code angezeigt -->
+        </div>
+
+        <button type="button" id="copy-button">HTML kopieren</button>
+    </div>
+
+    <script>
+        // JavaScript-Code zum Generieren und Kopieren des HTML-Codes
+        document.getElementById("generate-button").addEventListener("click", function() {
+            var element = document.getElementById("element").value;
+            var font = document.getElementById("font").value;
+            var content = document.getElementById("content").value;
+            var link = document.getElementById("link").value;
+            var emoji = document.getElementById("emoji").value;
+
+            var generatedHTML = "";
+
+            switch (element) {
+                case "main-heading":
+                    generatedHTML = generateMainHeading(font, emoji, content);
+                    break;
+                case "sub-heading":
+                    generatedHTML = generateSubHeading(font, emoji, content);
+                    break;
+                case "text-box":
+                    generatedHTML = generateTextBox(font, emoji, content);
+                    break;
+                case "button":
+                    generatedHTML = generateButton(font, emoji, content, link);
+                    break;
+                case "Zitatbox":
+                    generatedHTML = generateQuoteBox(font, emoji, content);
+                    break;
+                case "speech-bubble-emoji-links":
+                    generatedHTML = generateSpeechBubbleLeft(font, emoji, content);
+                    break;
+                case "speech-bubble-emoji-rechts":
+                    generatedHTML = generateSpeechBubbleRight(font, emoji, content);
+                    break;
+                case "Tipp-Box":
+                    generatedHTML = generateTipBox(font, emoji, content);
+                    break;
+                case "Drivelink":
+                    generatedHTML = generateDriveLink(font, content, link);
+                    break;
+                case "Officelink":
+                    generatedHTML = generateOfficeLink(font, content, link);
+                    break;
+                case "Messengerlink":
+                    generatedHTML = generateMessengerLink(font, content, link);
+                    break;
+                case "post-it":
+                    generatedHTML = generatePostIt(font, emoji, content);
+                    break;
+                    case "Lesetext":
+                    generatedHTML = generateLesetext(font, content);
+                    break; 
+                default:
+                    generatedHTML = "Ungültiges Element ausgewählt";
+            }
+
+            document.getElementById("output").textContent = generatedHTML;
+        });
+
+        document.getElementById("copy-button").addEventListener("click", function() {
+            var output = document.getElementById("output");
+            var range = document.createRange();
+            range.selectNode(output);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand("copy");
+            window.getSelection().removeAllRanges();
+        });
+
+
+
+function generateMainHeading(font, emoji, content) {
+    return `
+        <div class="CSS-main-heading CSS-bg-dark-blue CSS-text-white" >
+            <div class="CSS-emoji-circle-ueberschrift">
+                <span class="CSS-emoji-large-circle-ueberschrift">${emoji}</span>
+            </div>
+            <h1 class="CSS-content" style="font-family: ${font};">${content}</h1>
+        </div>
+    `;
+}
+
+
+
+function generateSubHeading(font, emoji, content) {
+    return `
+        <div class="CSS-sub-heading CSS-bg-purple CSS-text-white">
+            <div class="CSS-emoji-circle-ueberschrift">
+                <span class="CSS-emoji-large-circle-ueberschrift">${emoji}</span>
+            </div>
+            <h2 class="CSS-content"  style="font-family: ${font};">${content}</h2>
+        </div>
+    `;
+}
+
+
+function generateTextBox(font, emoji, content) {
+    return `
+        <div class="CSS-text-box CSS-bg-teal CSS-text-white">
+            <div class="CSS-emoji-circle-Text-Button">
+                <span class="CSS-emoji-large-circle-text-button">${emoji}</span>
+            </div>
+            <p class="CSS-content"  style="font-family: ${font};">${content}</p>
+        </div>
+    `;
+}
+
+
+function generateButton(font, emoji, buttonText, link) {
+    return `
+        <a href="${link}" class="CSS-button">
+            <div class="CSS-emoji-circle-Text-Button">
+                <span class="CSS-emoji-large-circle-text-button">${emoji}</span>
+            </div>
+            <span class="CSS-button-text"  style="font-family: ${font};">${buttonText}</span>
+        </a>
+    `;
+}
+
+function generateSpeechBubbleLeft(font, emoji, message) {
+    return `
+        <div class="speech-bubble speech-bubble-emoji-links" style="font-family: ${font};">
+            <span class="emoji">${emoji}</span>
+            <p>${message}</p>
+        </div>
+    `;
+}
+
+function generateSpeechBubbleRight(font, emoji, message) {
+    return `
+        <div class="speech-bubble-emoji-rechts" style="font-family: ${font};">
+            <div class="emoji">
+                <span>${emoji}</span>
+            </div>
+            <p>${message}</p>
+        </div>
+    `;
+}
+
+
+function generateQuoteBox(font, quote, emoji) {
+    return `
+        <div class="CSS-Zitatbox" style="font-family: ${font};">
+            <p class="CSS-quote-content">${emoji}</p>
+            <div class="CSS-circle-Zitatbox">
+                <span class="CSS-emoji-Zitatbox"  style="font-family: ${font};">${quote}</span>
+            </div>
+        </div>
+    `;
+}
+
+
+
+
+function generateTipBox(font, emoji, message) {
+    return `
+        <div class="CSS-Tipp-Box" style="font-family: ${font};">
+            <p>${message}</p>
+            <div class="CSS-Kreis-Emoji">
+                <span class="CSS-emoji-Tipp-Box">💡</span>
+            </div>
+        </div>
+    `;
+}
+
+
+function generateDriveLink(font, content, link) {
+    return `
+        <a href="${link}" class="CSS-Drivelink">
+            <div class="CSS-Kreis-Emoji-Drivelink">
+                <span class="CSS-emoji-Drivelink">📁</span>
+            </div>
+            <span class="CSS-text-Drivelink" style="font-family: ${font};">${content}</span>
+        </a>
+    `;
+}
+
+
+
+
+function generateOfficeLink(font, content, link) {
+    return `
+        <a href="${link}" class="CSS-OfficeLink">
+            <div class="CSS-Kreis-Emoji-OfficeLink">
+                <span class="CSS-emoji-OfficeLink">📎</span>
+            </div>
+            <span class="CSS-text-OfficeLink" style="font-family: ${font};">${content}</span>
+        </a>
+    `;
+}
+
+
+function generateMessengerLink(font, content, link) {
+    return `
+        <a href="${link}" class="CSS-MessengerLink">
+            <div class="CSS-Kreis-Emoji-MessengerLink">
+                <span class="CSS-emoji-MessengerLink">📬</span>
+            </div>
+            <span class="CSS-text-MessengerLink" style="font-family: ${font};">${content}</span>
+        </a>
+    `;
+}
+
+
+
+function generatePostIt(font, emoji, content) {
+    return `
+        <div class="DS-post-it">
+            <div class="DS-post-it-header">
+                <span class="DS-emoji">📍</span> Notiz
+            </div>
+            <div class="DS-post-it-content" style="font-family: ${font};">
+                ${content}
+            </div>
+        </div>
+    `;
+}
+
 function generateLesetext(font, content) 
   {
   content = "<div style='font-family: "+font+";'><span class='wort'><span = 'silbe'>"+
@@ -435,6 +849,9 @@ function generateLesetext(font, content)
   return content
   }
 
+    </script>
+</body>
+</html>
 
 
 
