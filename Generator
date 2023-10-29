@@ -412,27 +412,14 @@ function generatePostIt(font, emoji, content) {
     `;
 }
 
-function generateLesetext(font, content) {
-    // Teile den Text in Wörter auf
-    const words = content.split(' ');
+function generateLesetext(font, content) 
+  {
+  content = "<div style='font-family: "+font+";'><span class='wort'><span = 'silbe'>"+
+  content.replace(/\ /g,"</span></span> <span class='wort'><span cass='silbe'>").replace(/-/g,"</span><span class='silbe'>")+
+  "</span></div>"
+  return content
+  }
 
-    // HTML-Code für den Lesetext mit formatierten Silben
-    let formattedText = '<p style="font-family: ' + font + ';">';
-
-    for (let i = 0; i < words.length; i++) {
-        const word = words[i];
-        const syllables = word.split(' ');
-
-        for (let j = 0; j < syllables.length; j++) {
-            formattedText += '<span class="Lesetext_red">' + syllables[j] + '</span> ';
-        }
-        formattedText = formattedText.trim() + ' '; // Leerzeichen zwischen den Wörtern erhalten
-    }
-
-    formattedText += '</p>';
-
-    return formattedText;
-}
 
 
 
