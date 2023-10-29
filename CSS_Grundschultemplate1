@@ -434,6 +434,15 @@
 
 
 .wort > .silbe:nth-child(even) {color:red;}
+.Lesetext .wort .silbe:nth-child(odd) {
+    color: #305b83;
+    font-size: 32px;
+}
+
+.Lesetext .wort .silbe:nth-child(even) {
+    color: #ca354f;
+    font-size: 32px;
+}
 
 
  .Lesetext_red {
