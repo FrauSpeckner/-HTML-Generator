@@ -1,0 +1,443 @@
+ /* Hauptüberschrift */
+.CSS-main-heading {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 50px;
+    font-size: 36px;
+  font-weight: bold; 
+      background-color: #f4c159;
+  color: black;
+  font-family: Georgia, Times, serif;
+  border: 8px solid #ca326c;
+}
+
+/* Zwischenüberschrift */
+.CSS-sub-heading {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 25px;
+    font-size: 24px;
+  font-family: Georgia, Times, serif;
+  font-weight: bold; 
+  background-color: #ca326c;
+  color: white;
+  border: 4px solid #f4c159;
+}
+
+/* Textbox */
+.CSS-text-box {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 25px;
+    font-size: 18px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+      background-color: #dc7b3a;
+   border: 2px solid #ca326c;
+}
+
+/* Button */
+.CSS-button {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px; 
+    background-color: #ca326c;
+    color: #000000!important; 
+    font-size: 20px;
+  font-family: Georgia, Times, serif;
+   border: 2px solid #f4c159;
+}
+
+/* Überschirften - Emoji-Kreis */
+.CSS-emoji-circle-ueberschrift {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 20px;
+    background-color: #ffffff; /* Hintergrundfarbe  Kreises */
+   border: 4px solid white;
+}
+
+.CSS-emoji-circle-Text-Button {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 20px;
+    background-color: #ffffff; /* Hintergrundfarbe des Kreises */
+   border: 4px solid #fffff;
+}
+
+/* Überschriften -  großer Emoji im Kreis */
+.CSS-emoji-large-circle-ueberschrift {
+    font-size: 60px;
+}
+
+.CSS-emoji-large-circle-text-button {
+    font-size: 20px;
+}
+
+/* Button-Text */
+.CSS-button-text {
+    font-weight: bold;
+}
+
+
+/* Zitatbox */
+.CSS-Zitatbox {
+    position: relative;
+    width: 200px; /* Anpassen der Breite */
+    height: 200px; /* Quadratische Box */
+    margin: 20px;
+    background-color: #ccda68;
+    color: black; 
+  font-weight: bold; /* Schriftfarbe */
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Zitattext zentriert ausrichten */
+  border: 2px solid #ca326c;
+}
+
+/* Kreis Zitatbox */
+.CSS-circle-Zitatbox {
+    position: absolute;
+    bottom: -30px; /* Größerer Abstand zum unteren Rand */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px; /* Durchmesser des Kreises */
+    height: 50px; /* Durchmesser des Kreises */
+    background-color: #ffffff; /* Hintergrundfarbe des Kreises */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  border: 2px solid #ca326c;
+}
+
+/* Stile für den Emoji im Kreis */
+.CSS-emoji-Zitatbox {
+    font-size: 20px; /* Größe des Emojis anpassen */
+}
+
+/* Sprechblase-Emoji-links */
+.speech-bubble-emoji-links {
+  position: relative;
+  max-width: 300px; /* Anpassen der Breite */
+  background-color: #ccda68;
+  color: black; 
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+  text-align: left; 
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center; /* Vertikale Ausrichtung zentrieren */
+  position: relative;
+  border: 2px solid #ca326c; /*um die Sprechblase */
+}
+
+/* Sprechblase Emoji tile für den Emoji */
+.speech-bubble-emoji-links .emoji {
+  font-size: 24px; /* Größe des Emojis anpassen */
+  position: absolute;
+  left: -20px; /* Negative Position, um zur Hälfte in der Sprechblase zu sein */
+  top: 50%; /* In der vertikalen Mitte der Sprechblase positionieren */
+  transform: translateY(-50%);
+  border: 2px solid: #ca326c; /* Kreis um den Emoji */
+  border-radius: 50%; /* Runde Form */
+  padding: 5px; /* Innenabstand für den Kreis */
+  background-color: white; /* Weißer Hintergrund für den Kreis */
+  z-index: 1; /* Überlagern der Sprechblase */
+}
+
+/* Rahmen um den Emoji-Kreis der Sprechblase links */
+.speech-bubble-emoji-links .emoji {
+  border: 2px solid #ca326c;
+}
+
+/* Text Sprechblase links */
+.speech-bubble-emoji-links p {
+  margin: 0;
+  padding: 10px 0 10px 30px; /* Anpassung des Abstands zum Text */
+}
+
+/* Sprechblase-Emoji-rechts */
+.speech-bubble-emoji-rechts {
+  position: relative;
+  max-width: 300px; /* Anpassen der Breite */
+  background-color: #ccda68; 
+  color: black; /* Schriftfarbe */
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  text-align: right; /* Text rechtsbündig ausrichten */
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center; /* Vertikale Ausrichtung zentrieren */
+  position: relative;
+  border: 2px solid #ca326c; 
+}
+
+/* Stile für den Emoji */
+.speech-bubble-emoji-rechts .emoji {
+  font-size: 24px; /* Größe des Emojis anpassen */
+  position: absolute;
+  right: -20px; /* Negative Position, um zur Hälfte in der Sprechblase zu sein */
+  top: 50%; /* In der vertikalen Mitte der Sprechblase positionieren */
+  transform: translateY(-50%);
+  border: 2px solid white; /* Weißer Kreis um den Emoji */
+  border-radius: 50%; /* Runde Form */
+  padding: 5px; /* Innenabstand für den Kreis */
+  background-color: white; /* Weißer Hintergrund für den Kreis */
+  z-index: 1; /* Überlagern der Sprechblase */
+}
+
+/*  Rahmen um den Emoji-Kreis */
+.speech-bubble-emoji-rechts .emoji {
+  border: 2px solid #ca326c;
+}
+
+/* Stile für den Text in der Sprechblase */
+.speech-bubble-emoji-rechts p {
+  margin: 0;
+  padding: 10px 30px 10px 0; /* Anpassung des Abstands zum Text */
+}
+
+/* Stile für die Tipp-Box */
+.CSS-Tipp-Box {
+    position: relative;
+    width: 250px;
+    height: 100px;
+    margin: 20px;
+    background-color: #f4c159; 
+    border: 2px solid #ca326c; 
+    color: black; /* Schriftfarbe */
+  font-weight: bold; 
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+/* Stile für den Kreis mit Emoji */
+.CSS-Kreis-Emoji {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: 2px solid #ca326c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Stile für das Emoji im Kreis */
+.CSS-emoji-Tipp-Box {
+    font-size: 24px; /* Größe des Emojis anpassen */
+}
+
+
+/* Stile für den Drivelink */
+.CSS-Drivelink {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px;
+    background-color: #dc7b3a;
+    border: 2px solid #ccda68;
+    color: black; 
+  font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 20px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+/* Stile für den Kreis mit Emoji */
+.CSS-Kreis-Emoji-Drivelink {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: white; 
+    border: 2px solid #ccda68;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Stile für das Emoji im Kreis */
+.CSS-emoji-Drivelink {
+    font-size: 24px; /* Größe des Emojis anpassen */
+}
+
+/* Stile für den Text neben dem Kreis */
+.CSS-text-Drivelink {
+    margin-left: 20px; 
+  color: white; 
+/* Abstand zwischen Kreis und Text erhöhen */
+}
+
+/* Stile für den OfficeLink */
+.CSS-OfficeLink {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px;
+    background-color: #dc7b3a; 
+    border: 2px solid #ccda68; uer Rahmen */
+    color: black; 
+  font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 20px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+/* Stile für den Kreis mit Emoji */
+.CSS-Kreis-Emoji-OfficeLink {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: 2px solid #ccda68;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Stile für das Emoji im Kreis */
+.CSS-emoji-OfficeLink {
+    font-size: 24px; /* Größe des Emojis anpassen */
+}
+
+/* Stile für den Text neben dem Kreis */
+.CSS-text-OfficeLink {
+    margin-left: 20px; 
+  color: white; * Abstand zwischen Kreis und Text erhöhen */
+}
+
+
+
+/* Stile für den MessengerLink Button */
+.CSS-MessengerLink {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid black; 
+    border-radius: 20px; 
+    background-color: #ccda68; 
+    color: black; /* Schriftfarbe */
+    font-size: 20px;
+    margin: 10px;
+}
+
+/* Stile für den Emoji-Kreis im MessengerLink */
+.CSS-Kreis-Emoji-MessengerLink {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 20px;
+  font-family: Georgia, Times, serif;
+    background-color: #ffffff; /* Hintergrundfarbe des Kreises */
+    border: 2px solid white; /* Grauer Rahmen */
+  
+}
+
+/* Stile für den großen Emoji im Kreis im MessengerLink */
+.CSS-emoji-MessengerLink {
+    font-size: 24px; /* Größe des Emojis anpassen */
+}
+
+/* Stile für den Text im MessengerLink */
+.CSS-text-MessengerLink {
+    font-weight: bold;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.DS-post-it {
+  background-color: white; 
+  border: 2px solid #dc7b3a; 
+  border-radius: 10px; /* Abrundung der Ecken */
+  padding: 00px;
+  width: 200px;
+  margin: 20px;
+  position: relative;
+  overflow: visible; /* Erlaubt den Inhalt, über den Rand des Post-its hinauszuschauen */
+}
+
+.DS-post-it-header {
+  background-color: #dc7b3a; 
+  color: white;
+  font-weight: bold;
+   font-family: Georgia, Times, serif;
+  font-size: 32px;
+  padding: 10px; /* Größere Innenpolsterung für den Kopfbereich */
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  position: relative; /* Positionierung innerhalb des Post-its */
+  text-align: center; /* Zentriert den Text */
+}
+
+.DS-emoji {
+  font-size: 46px; /* Größere Schriftgröße für das Emoji */
+  position: absolute;
+  top: -15px; /* Position über dem Post-it */
+  left: 0px; /* Position von links */
+  transform: rotate(-10deg); /* Neigung des Emojis um -10 Grad */
+}
+
+.DS-post-it-content {
+  padding: 10px;
+   font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 16px; 
+}
+
+.DS-post-it-header span {
+  margin-left: 2px; /* Hier kannst du den Abstand anpassen */
+}
+ 
+ .Lesetext_red {
+        color: #ca354f;
+        font-size: 22px; 
+    }
+
+    .Lesetext_blue {
+        color: 3c75b6;
+        font-size: 22px; 
+    }
