@@ -3,8 +3,7 @@
 <head>
     <style>
         /* Stil für den Generator */
-
-@font-face {
+        @font-face {
     font-family: 'GrundschulschriftDS';
     src: url('//2ttf.com/webfont/Atj1My9YsiY/webfont.ttf') format('truetype');
 }
@@ -16,7 +15,7 @@
         
 
         #generator-container {
-            width: 80%;
+            width: 99%;
             max-width: 500px;
             margin: 0 auto;
         }
@@ -78,10 +77,29 @@ font-weight: bold;
             margin-top: 10px;
             width: 100%;
         }
+
+        /* Stil für ein- und ausklappbaren Button */
+        #toggle-form-button {
+            background-color: #C4C6B0;
+            color: black;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        /* Verstecktes Formular standardmäßig */
+        #generator-container {
+            display: none;
+            transition: all 0.5s;
+        }
     </style>
 </head>
 <body>
-   
+    <button type="button" id="toggle-form-button">Generator ein-/ausklappen</button>
     <div id="generator-container">
         <form id="generator-form">
             <label for="element">Auswahl des Elements:</label>
@@ -210,7 +228,16 @@ font-weight: bold;
         <button type="button" id="copy-button">HTML kopieren</button>
     </div>
 
+    <!-- ... -->
     <script>
+        // JavaScript zum Steuern des Ein- und Ausklappens
+        document.getElementById("toggle-form-button").addEventListener("click", function() {
+            var container = document.getElementById("generator-container");
+            var isVisible = container.style.display === "block";
+            container.style.display = isVisible ? "none" : "block"; // Wechselt die Sichtbarkeit
+            this.textContent = isVisible ? "Generator ein-/ausklappen" : "Generator schließen"; // Wechselt den Text des Buttons
+        });
+
         // JavaScript-Code zum Generieren und Kopieren des HTML-Codes
         document.getElementById("generate-button").addEventListener("click", function() {
             var element = document.getElementById("element").value;
@@ -433,10 +460,6 @@ function generateLesetext(font, content) {
         "</span></div>";
     return content;
 }
-
-
-
-
 
 
 
