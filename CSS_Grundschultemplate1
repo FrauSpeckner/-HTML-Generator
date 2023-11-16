@@ -454,6 +454,6 @@
     .Lesetext_blue {
         color: 3c75b6;
         font-size: 22px; 
-
+  }
 </style>
-    }
+    
